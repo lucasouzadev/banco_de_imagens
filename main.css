@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: purple;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border-bottom: 16px solid rgb(75, 0, 75);
+}
+
+header button {
+    background-color: rgb(75, 0, 75);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: rgb(100, 0, 100);
+}
+
+header button:active {
+    background-color: rgb(125, 0, 125);
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+form {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    margin: 1rem 2rem;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 1rem;
+}
+
+form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    animation: Border 1s ease infinite;
+    border: 1px solid;
+}
+
+form button {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: rgb(100, 0, 100);
+}
+
+#cancel {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#cancel:hover {
+    background-color: rgb(100, 0, 0);
+}
+
+form input:focus {
+    outline: none;
+}
+
+@keyframes Border {
+    0% {
+        border-color: rgb(75, 0, 75);
+    }
+    25% {
+        border-color: rgb(120, 10, 120);
+    }
+    50% {
+        border-color: rgb(165, 20, 165);
+    }
+    75% {
+        border-color: rgb(210, 30, 210);
+    }
+    100% {
+        border-color: rgb(255, 41, 255);
+    }
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden;
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.overlay a {
+    animation: Color 10s ease infinite;
+    text-decoration: none;
+}
+
+@keyframes Color {
+    0% {
+        color: red;
+    }
+    14% {
+        color: orange;
+    }
+    28% {
+        color: yellow;
+    }
+    42% {
+        color: green;
+    }
+    56% {
+        color: blue;
+    }
+    70% {
+        color: indigo;
+    }
+    85% {
+        color: violet;
+    }
+    100% {
+        color: red;
+    }
+}
+
+ul li:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
